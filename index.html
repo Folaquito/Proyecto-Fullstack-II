@@ -1,140 +1,160 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fotomica</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fotomica</title>
 
-  <!-- Materialize CSS -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <!-- Materialize CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+      rel="stylesheet"
+    />
 
-  <!-- Material Icons -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 
-  <link href= "Styles.css" rel="stylesheet">
-</head>
-<body>
+    <link href="styles/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="black">
+      <div class="nav-wrapper container">
+        <a href="index.html" class="brand-logo" style="display: flex; align-items: center">
+          <img
+            src="assets/img/Logo1.jpg"
+            alt="Logo Fotomica"
+            style="height: 40px; margin-right: 10px; vertical-align: middle; border-radius: 50%"
+          />Fotomica</a
+        >
+        <a href="#" data-target="mobile-menu" class="sidenav-trigger"
+          ><i class="material-icons">menu</i></a
+        >
+        <ul class="right hide-on-med-and-down">
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+    </nav>
 
-  <!-- Navbar -->
-  <nav class="black">
-    <div class="nav-wrapper container">
-   <a href="index.html" class="brand-logo" style="display: flex; align-items: center;">
-  <img src="img/Logo1.jpg" alt="Logo Fotomica" style="height:40px; margin-right:10px; vertical-align: middle; border-radius:50%;">Fotomica</a>
-      <a href="#" data-target="mobile-menu" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-    </div>
-  </nav>
+    <ul class="sidenav" id="mobile-menu">
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
 
-  <ul class="sidenav" id="mobile-menu">
-    <li><a href="#servicios">Servicios</a></li>
-    <li><a href="#contacto">Contacto</a></li>
-  </ul>
+    <!-- Hero -->
+    <header>
+      <div class="container center">
+        <h1>Revive tus recuerdos en 35mm</h1>
+        <p class="flow-text">Revelado profesional de rollos analógicos</p>
+      </div>
+    </header>
 
-  <!-- Hero -->
-  <header>
-    <div class="container center">
-      <h1>Revive tus recuerdos en 35mm</h1>
-      <p class="flow-text">Revelado profesional de rollos analógicos</p>
-    </div>
-  </header>
-
-  <!-- Servicios -->
-  <section id="servicios" class="section container services">
-    <h4 class="center">Nuestros Servicios</h4>
-    <div class="row">
-      <div class="col s12 m3">
-        <div class="card">
-          <div class="card-image">
-            <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90">
-            <span class="card-title">Revelado</span>
-            <a href="Revelado.html" class="btn-small right" style="margin: 10px;">Ver más</a>
+    <!-- Servicios -->
+    <section id="servicios" class="section container services">
+      <h4 class="center">Nuestros Servicios</h4>
+      <div class="row">
+        <div class="col s12 m3">
+          <div class="card">
+            <div class="card-image">
+              <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90" />
+              <span class="card-title">Revelado</span>
+              <a href="Revelado.html" class="btn-small right" style="margin: 10px">Ver más</a>
+            </div>
+            <div class="card-content">
+              Revelado en blanco y negro o color con químicos de alta calidad.
+            </div>
           </div>
-          <div class="card-content">
-            Revelado en blanco y negro o color con químicos de alta calidad.
+        </div>
+
+        <div class="col s12 m3">
+          <div class="card">
+            <div class="card-image">
+              <img src="https://images.unsplash.com/photo-1555685812-4b943f1cb0eb" />
+              <span class="card-title">Escaneo</span>
+              <a href="Escaneo.html" class="btn-small right" style="margin: 10px">Ver más</a>
+            </div>
+            <div class="card-content">
+              Digitalización de negativos en alta resolución listo para editar o compartir.
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m3">
+          <div class="card">
+            <div class="card-image">
+              <img src="assets/img/FotografiaLogo1.png" />
+              <span class="card-title">Fotografía</span>
+              <a href="Fotografia.html" class="btn-small right" style="margin: 10px">Ver más</a>
+            </div>
+            <div class="card-content">
+              Servicios de fotografía química y digital semi profesional: sesiones, eventos,
+              productos, revelado y digitalización.
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m3">
+          <div class="card">
+            <div class="card-image">
+              <img
+                src="https://camaraanalogica.com/wp-content/uploads/2022/04/canon-av1-slr-1000x625.jpg"
+              />
+              <span class="card-title">Catalogo</span>
+              <a href="Catalogo.html" class="btn-small right" style="margin: 10px">Ver más</a>
+            </div>
+            <div class="card-content">
+              Camaras usadas directas desde japon, cuidadosamente seleccionadas y listas para usar.
+            </div>
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="col s12 m3">
-        <div class="card">
-          <div class="card-image">
-            <img src="https://images.unsplash.com/photo-1555685812-4b943f1cb0eb">
-            <span class="card-title">Escaneo</span>
-            <a href="Escaneo.html" class="btn-small right" style="margin: 10px;">Ver más</a>
-          </div>
-          <div class="card-content">
-            Digitalización de negativos en alta resolución listo para editar o compartir.
-          </div>
+    <!-- Footer (Contacto + Copyright) -->
+    <footer id="contacto" class="black white-text center">
+      <div class="container">
+        <h4 class="center">Contáctanos</h4>
+        <div class="row center">
+          <a
+            href="https://www.instagram.com/fotomica_cl?igsh=czU0cmViOWYyMzd5"
+            target="_blank"
+            rel="noopener"
+            class="instagram-link"
+          >
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+              alt="Instagram Fotomica"
+              style="width: 70px; height: 70px; border-radius: 20%; margin: 20px 0"
+            />
+          </a>
+          <p>Síguenos y contáctanos en Instagram</p>
         </div>
+        <p>&copy; 2025 Fotomica | Todos los derechos reservados</p>
       </div>
+    </footer>
 
-      <div class="col s12 m3">
-        <div class="card">
-          <div class="card-image">
-            <img src="img/FotografiaLogo1.png">
-            <span class="card-title">Fotografía</span>
-            <a href="Fotografia.html" class="btn-small right" style="margin: 10px;">Ver más</a>
-          </div>
-          <div class="card-content">
-            Servicios de fotografía química y digital semi profesional: sesiones, eventos, productos, revelado y digitalización.
-          </div>
-        </div>
-      </div>
+    <!-- Materialize JS & Init -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        M.AutoInit();
+      });
 
-      <div class="col s12 m3">
-        <div class="card">
-          <div class="card-image">
-            <img src="https://camaraanalogica.com/wp-content/uploads/2022/04/canon-av1-slr-1000x625.jpg">
-            <span class="card-title">Catalogo</span>
-            <a href="Catalogo.html" class="btn-small right" style="margin: 10px;">Ver más</a>
-          </div>
-          <div class="card-content">
-            Camaras usadas directas desde japon, cuidadosamente seleccionadas y listas para usar.
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+      // Validación simple de formulario
+      document.getElementById('contactForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+        const nombre = document.getElementById('nombre').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const mensaje = document.getElementById('mensaje').value.trim();
 
-  <!-- Footer (Contacto + Copyright) -->
-  <footer id="contacto" class="black white-text center">
-    <div class="container">
-      <h4 class="center">Contáctanos</h4>
-      <div class="row center">
-        <a href="https://www.instagram.com/fotomica_cl?igsh=czU0cmViOWYyMzd5" target="_blank" rel="noopener" class="instagram-link">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Fotomica" style="width:70px;height:70px;border-radius:20%;margin:20px 0;">
-        </a>
-        <p>Síguenos y contáctanos en Instagram</p>
-      </div>
-      <p>&copy; 2025 Fotomica | Todos los derechos reservados</p>
-    </div>
-  </footer>
-
-  <!-- Materialize JS & Init -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      M.AutoInit();
-    });
-
-    // Validación simple de formulario
-    document.getElementById('contactForm').addEventListener('submit', function (e) {
-      e.preventDefault();
-      const nombre = document.getElementById('nombre').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const mensaje = document.getElementById('mensaje').value.trim();
-
-      if (!nombre || !email || !mensaje) {
-        M.toast({ html: 'Por favor, completa todos los campos.', classes: 'red' });
-      } else {
-        M.toast({ html: 'Mensaje enviado. ¡Gracias!', classes: 'green' });
-        this.reset();
-      }
-    });
-  </script>
-
-</body>
+        if (!nombre || !email || !mensaje) {
+          M.toast({ html: 'Por favor, completa todos los campos.', classes: 'red' });
+        } else {
+          M.toast({ html: 'Mensaje enviado. ¡Gracias!', classes: 'green' });
+          this.reset();
+        }
+      });
+    </script>
+  </body>
 </html>
