@@ -1,0 +1,316 @@
+/* Normalización de imágenes en cards del catálogo */
+.card .card-image img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+header {
+  background: url('img/banner2.png') center/cover no-repeat;
+  background-blend-mode: overlay;
+  background-color: rgba(250, 250, 250, 0.4);
+  height: 40vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-shadow: 1px 1px 4px black;
+}
+header h1 {
+  font-size: 3rem;
+}
+.services .card-image img {
+  height: 200px;
+  object-fit: cover;
+}
+footer {
+  padding: 20px 0;
+}
+
+:root {
+  --primary-color: #181818;
+  --accent-color: #ffd100;
+  --text-light: #f5f5f5;
+  --text-dark: #222;
+  --card-bg: #232323;
+  --border-color: #222;
+  --input-bg: #222;
+  --input-border: #444;
+  --price-color: #fff;
+  --collection-bg: #f5f5f5;
+  --collection-text: #222;
+}
+
+/* Fondo y texto general */
+body {
+  background: var(--primary-color);
+  color: var(--text-light);
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar */
+nav {
+  background-color: var(--primary-color) !important;
+}
+nav .brand-logo {
+  color: var(--accent-color) !important;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+nav a {
+  color: var(--text-light) !important;
+}
+
+/* Hero */
+header h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--accent-color);
+}
+header p {
+  font-size: 1.4rem;
+  color: var(--text-light);
+}
+
+/* Tarjetas */
+.card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.8);
+  border: 1px solid var(--border-color);
+  color: var(--text-light); /* Texto claro sobre fondo oscuro */
+}
+.card-title {
+  color: var(--accent-color) !important;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+.card-content {
+  color: var(--text-light); /* Texto claro sobre fondo oscuro */
+}
+.card-content strong,
+.flip-card-back strong {
+  color: var(--price-color) !important; /* Precios en blanco puro */
+  font-weight: bold;
+  font-size: 1.15em;
+}
+
+/* Limitar tamaño de imágenes en flip-cards */
+.flip-card-front .card-image img {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  margin: 0;
+  display: block;
+  border-radius: 12px 12px 0 0;
+}
+
+.flip-card-front .card-image {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  margin-bottom: 0;
+  border-radius: 12px 12px 0 0;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Flip Card Styles */
+.flip-card {
+  background-color: transparent;
+  width: 100%;
+  height: 370px;
+  perspective: 1000px;
+  margin-bottom: 30px;
+}
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: var(--card-bg);
+}
+.flip-card-front {
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.flip-card-front .card-content.center-align {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  width: 90%;
+  background: rgba(36, 36, 36, 0.95);
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 12px 8px 8px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+  color: var(--text-light) !important;
+}
+.flip-card-back {
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 3;
+  color: var(--text-light) !important;
+}
+.flip-btn {
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+/* Servicios */
+.section h4 {
+  color: #f5f5f5 !important;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+/* Formulario */
+input[type='text'],
+input[type='email'],
+textarea {
+  background: var(--input-bg) !important;
+  color: var(--text-light) !important;
+  border: 1px solid var(--input-border) !important;
+  border-radius: 6px;
+  padding: 0.8rem;
+}
+input:focus,
+textarea:focus {
+  border-bottom: 1px solid var(--accent-color) !important;
+  box-shadow: 0 1px 0 0 var(--accent-color) !important;
+}
+input::placeholder,
+textarea::placeholder {
+  color: #bdbdbd !important;
+}
+
+/* Botón */
+.btn,
+.btn-small {
+  background: var(--accent-color) !important;
+  color: var(--text-dark) !important;
+  border-radius: 8px;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(255, 209, 0, 0.2);
+  transition: background 0.2s;
+}
+.btn:hover,
+.btn-small:hover {
+  background: #222 !important;
+  color: var(--text-light) !important;
+}
+
+/* Footer */
+footer {
+  background: #181818 !important; /* Fondo oscuro */
+  color: #f5f5f5 !important; /* Texto claro */
+  padding: 20px 0;
+  border-top: 1px solid #232323;
+}
+
+/* Sidenav */
+.sidenav {
+  background: var(--primary-color);
+  color: var(--text-light);
+}
+.sidenav a {
+  color: var(--text-light) !important;
+}
+
+/* Animación suave */
+* {
+  transition: all 0.3s ease-in-out;
+}
+
+.carousel .carousel-item img {
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  border: 2px solid var(--card-bg);
+}
+
+.instagram-link img {
+  border: 2px solid var(--card-bg);
+}
+
+::-webkit-scrollbar {
+  background: var(--primary-color);
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--card-bg);
+  border-radius: 8px;
+}
+
+/* Textos generales: claros sobre fondo oscuro, oscuros sobre fondo claro */
+p,
+li,
+span,
+.flow-text {
+  color: inherit !important;
+}
+
+/* Títulos de sección claros y legibles sobre fondo oscuro */
+h4,
+.section h4,
+h4.section-title,
+.section-title {
+  color: #f5f5f5 !important;
+  font-weight: 700;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+.section .collection,
+.section .collection-item,
+.collection,
+.collection-item,
+ul.collection,
+ul.collection > li.collection-item {
+  background: #232323 !important; /* Fondo oscuro */
+  color: #f5f5f5 !important; /* Texto claro */
+  border-radius: 8px;
+  border-bottom: 1px solid #333 !important;
+}
+
+ul.collection > li.collection-item:last-child {
+  border-bottom: none !important;
+}
+
+/* Fondo oscuro y texto claro para la sección de contacto */
+.section#contacto,
+.section#contactar {
+  background-color: #232323 !important;
+  color: #f5f5f5 !important;
+  border-radius: 8px;
+  padding: 32px 0;
+}

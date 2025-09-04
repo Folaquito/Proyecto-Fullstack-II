@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fotomica - Fotografía</title>
+
+    <!-- Materialize CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+    <link href="Styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="black">
+      <div class="nav-wrapper container">
+        <a href="index.html" class="brand-logo" style="display: flex; align-items: center">
+          <img
+            src="img/Logo1.jpg"
+            alt="Logo Fotomica"
+            style="height: 40px; margin-right: 10px; vertical-align: middle; border-radius: 50%"
+          />Fotomica</a
+        >
+        <a href="#" data-target="mobile-menu" class="sidenav-trigger"
+          ><i class="material-icons">menu</i></a
+        >
+        <ul class="right hide-on-med-and-down">
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <ul class="sidenav" id="mobile-menu">
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+
+    <!-- Hero -->
+    <header>
+      <div class="container center">
+        <h1>Servicios Fotográficos</h1>
+        <p class="flow-text">
+          Ofrecemos servicios de fotografía química y digital semi profesional: retratos, eventos,
+          productos, sesiones personalizadas y más.
+        </p>
+      </div>
+    </header>
+
+    <!-- Servicios -->
+    <section id="servicios" class="section container services">
+      <h4 class="center">¿Qué ofrecemos?</h4>
+      <div class="row">
+        <div class="col s12 m6">
+          <div class="card">
+            <div class="card-image">
+              <img src="img/foto-quimica.jpg" alt="Fotografía Química" />
+              <span class="card-title">Fotografía Química</span>
+            </div>
+            <div class="card-content">
+              Sesiones y revelado tradicional en película, digitalización de negativos, ampliaciones
+              y copias en papel fotográfico.
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6">
+          <div class="card">
+            <div class="card-image">
+              <img src="img/foto-digital.jpg" alt="Fotografía Digital" />
+              <span class="card-title">Fotografía Digital</span>
+            </div>
+            <div class="card-content">
+              Cobertura de eventos, retratos, fotografía de productos y edición digital con calidad
+              semi profesional.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer (Contacto + Copyright) -->
+    <footer id="contacto" class="black white-text center">
+      <div class="container">
+        <h4 class="center">Contáctanos</h4>
+        <div class="row center">
+          <a
+            href="https://www.instagram.com/fotomica_cl?igsh=czU0cmViOWYyMzd5"
+            target="_blank"
+            rel="noopener"
+            class="instagram-link"
+          >
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+              alt="Instagram Fotomica"
+              style="width: 70px; height: 70px; border-radius: 20%; margin: 20px 0"
+            />
+          </a>
+          <p>Síguenos y contáctanos en Instagram</p>
+        </div>
+        <p>&copy; 2025 Fotomica | Todos los derechos reservados</p>
+      </div>
+    </footer>
+
+    <!-- Materialize JS & Init -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        M.AutoInit();
+      });
+
+      // Validación simple de formulario
+      document.getElementById('contactForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+        const nombre = document.getElementById('nombre').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const mensaje = document.getElementById('mensaje').value.trim();
+
+        if (!nombre || !email || !mensaje) {
+          M.toast({ html: 'Por favor, completa todos los campos.', classes: 'red' });
+        } else {
+          M.toast({ html: 'Mensaje enviado. ¡Gracias!', classes: 'green' });
+          this.reset();
+        }
+      });
+    </script>
+  </body>
+</html>
